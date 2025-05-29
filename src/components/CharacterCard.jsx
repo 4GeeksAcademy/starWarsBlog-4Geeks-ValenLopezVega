@@ -1,5 +1,4 @@
 export function CharacterCard() {
-    // style="width: 18rem;"
     return (
         <div className="card my-card" >
             <img src="https://picsum.photos/seed/picsum/200/300" className="card-img-top" alt="..."/>
