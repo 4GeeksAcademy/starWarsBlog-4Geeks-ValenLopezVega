@@ -1,5 +1,4 @@
 export function Carousel({title, items, renderCard}){
-
     return(
         <div className="">
             <h1 className="text-danger">{title}</h1>

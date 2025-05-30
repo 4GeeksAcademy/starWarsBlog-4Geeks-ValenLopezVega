@@ -1,7 +1,8 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import { Carousel } from "../components/Carousel.jsx";
 import { CharacterCard } from "../components/CharacterCard.jsx";
-import { PlanetCard } from "../components/PlanetCard.jsx";
-import { VehicleCard } from "../components/VehicleCard.jsx";
+// import { PlanetCard } from "../components/PlanetCard.jsx";
+// import { VehicleCard } from "../components/VehicleCard.jsx";
 import { getAllCharacters, getAllVehicles, getAllPlanets } from "../services/starWarsApi.jsx";
 import { useEffect } from "react";
 import storeReducer from "../store.js";
@@ -39,14 +40,14 @@ export const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className="container">
             <Carousel
                 title='Characters'
                 items={store.characters}
                 renderCard={(character) => <CharacterCard data={character} />}
             />
 
-            <Carousel
+            {/* <Carousel
                 title='Planets'
                 items={store.planets}
                 renderCard={(planet) => <PlanetCard data={planet} />}
@@ -56,7 +57,7 @@ export const Home = () => {
                 title='Vehicles'
                 items={store.vehicles}
                 renderCard={(vehicle) => <VehicleCard data={vehicle} />}
-            />
+            /> */}
         </div>
     );
 }; 

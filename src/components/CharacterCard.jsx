@@ -1,28 +1,14 @@
-export function CharacterCard() {
+export function CharacterCard({data}) {
     return (
         <div className="card my-card" >
-            <img src="https://picsum.photos/seed/picsum/200/300" className="card-img-top" alt="..."/>
+            <img src={data.image} className="card-img-top" alt="..."/>
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <h5 className="card-title">{data.properties.name}</h5>
+                    <p className="card-text">{data.properties.hair_color}</p>
+                    <p className="card-text">{data.properties.eye_color}</p>
+                    <a href="#" className="btn btn-primary">Learn more</a>
+                    <button>fav</button>
                 </div>
         </div>
     )
 }
-
-
-						<div className="my-card">
-							<img
-								src={item.image}
-								alt=""
-								className="w-100"
-							/>
-							<div>
-								<p>{item.properties.name}</p>
-								<p>{item.properties.hair_color}</p>
-								<p>{item.properties.eye_color}</p>
-
-								<button>learn more</button>
-								<button>fav</button>
-							</div>

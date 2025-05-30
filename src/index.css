@@ -1,3 +1,9 @@
 .my-card{
     width: 18rem;
 }
+
+.my-carousel{
+    display: flex;
+    overflow-x: scroll;
+    gap: 15px;
+}

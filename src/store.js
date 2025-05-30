@@ -12,19 +12,19 @@ export default function storeReducer(store, action = {}) {
     case 'SET_CHARACTERS':
       return {
         ...store,
-        characters: [...store.characters, action.payload]
+        characters: action.payload
       };
 
   case 'SET_PLANETS':
     return{
       ...store,
-      planets: [...store.planets, action.payload]
+      planets: action.payload
     }
 
   case 'SET_VEHICLES':
     return{
       ...store,
-      vehicles: [...store.vehicles, action.payload]
+      vehicles: action.payload
     }
 
     default:
