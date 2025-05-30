@@ -31,6 +31,7 @@ async function getAllPlanets() {
                 const res = await fetch(item.url)
                 const details = await res.json()
 
+                details.result["image"] = `https://raw.githubusercontent.com/breatheco-de/swapi-images/refs/heads/master/public/images/planets/${details.result.uid}.jpg`
                 return details.result
             })
         )
@@ -53,6 +54,7 @@ async function getAllVehicles() {
                 const res = await fetch(item.url)
                 const details = await res.json()
 
+                details.result["image"] = `https://raw.githubusercontent.com/breatheco-de/swapi-images/refs/heads/master/public/images/vehicles/${details.result.uid}.jpg`
                 return details.result
             })
 
