@@ -10,3 +10,19 @@ export function CharacterCard() {
         </div>
     )
 }
+
+
+						<div className="my-card">
+							<img
+								src={item.image}
+								alt=""
+								className="w-100"
+							/>
+							<div>
+								<p>{item.properties.name}</p>
+								<p>{item.properties.hair_color}</p>
+								<p>{item.properties.eye_color}</p>
+
+								<button>learn more</button>
+								<button>fav</button>
+							</div>
