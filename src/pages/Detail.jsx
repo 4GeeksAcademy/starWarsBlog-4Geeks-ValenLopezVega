@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer";
-import { Link } from "react-router-dom"; // Si usás enlaces para volver
-import PropTypes from "prop-types"; // Si le pasás props al componente
+import { Link } from "react-router-dom";
 
 export function Detail() {
     const { store } = useGlobalReducer()
@@ -19,89 +18,101 @@ export function Detail() {
     switch (type) {
         case 'characters':
             content = (
-                <div className="container mt-5">
-                    <div className="row align-items-center">
+                <div className="container mt-5 ">
+                    <div className="d-flex flex-wrap align-items-start">
 
-                        <div className="col-md-4 mb-3">
-                            <img src={character.image} classNameName="img-fluid rounded-start" alt={character.properties.name} />
-                        </div>
+                        <img
+                            src={character.image}
+                            className="flex-image me-4 mb-3"
+                            alt={character.properties.name}
+                        />
 
-                        <div className="col-md-8">
+                        <div className="flex-grow-1">
                             <h2 className="mb-4">{character.properties.name}</h2>
 
-                            <ul className="list-group list-group-flush">
-                                <li className="list-group-item">Eye color: {character.properties.eye_color}</li>
-                                <li className="list-group-item">Hair color: {character.properties.hair_color}</li>
-                                <li className="list-group-item">Gender: {character.properties.gender}</li>
-                                <li className="list-group-item">Height: {character.properties.height}</li>
-                                <li className="list-group-item">Skin color: {character.properties.skin_color}</li>
+                            <ul className="list-group list-group-flush mb-3 ">
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Eye color: {character.properties.eye_color}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Hair color: {character.properties.hair_color}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Gender: {character.properties.gender}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Height: {character.properties.height}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Skin color: {character.properties.skin_color}</li>
                             </ul>
 
-                            <Link to="/" className="btn btn-primary mt-4">Volver</Link>
+                            <Link to="/" className="btn btn-primary">Volver</Link>
                         </div>
                     </div>
                 </div>
             );
             break;
+
         case 'planets':
             content = (
-                <div className="container mt-5">
-                    <div className="row align-items-center">
+                <div className="container mt-5 ">
+                    <div className="d-flex flex-wrap align-items-start">
+                        {/* Imagen */}
+                        <img
+                            src={planet.image}
+                            className="flex-image me-4 mb-3"
+                            alt={planet.properties.name}
+                        />
 
-                        <div className="col-md-4 mb-3">
-                            <img src={planet.image} classNameName="img-fluid rounded-start" alt={planet.properties.name} />
-                        </div>
-
-                        <div className="col-md-8">
+                        {/* Texto */}
+                        <div className="flex-grow-1">
                             <h2 className="mb-4">{planet.properties.name}</h2>
 
-                            <ul className="list-group list-group-flush">
-                                <li className="list-group-item">Climate: {planet.properties.climate}</li>
-                                <li className="list-group-item">Terrain: {planet.properties.terrain}</li>
-                                <li className="list-group-item">Gravity: {planet.properties.gravity}</li>
-                                <li className="list-group-item">Population: {planet.properties.population}</li>
-                                <li className="list-group-item">Rotation period: {planet.properties.rotation_period}</li>
-                                <li className="list-group-item">Orbital period: {planet.properties.orbital_period}</li>
+                            <ul className="list-group list-group-flush mb-3">
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Climate: {planet.properties.climate}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Terrain: {planet.properties.terrain}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Gravity: {planet.properties.gravity}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Population: {planet.properties.population}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Rotation period: {planet.properties.rotation_period}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Orbital period: {planet.properties.orbital_period}</li>
                             </ul>
 
-                            <Link to="/" className="btn btn-primary mt-4">Volver</Link>
+                            <Link to="/" className="btn btn-primary">Volver</Link>
                         </div>
                     </div>
                 </div>
             );
             break;
+
         case 'vehicles':
             content = (
                 <div className="container mt-5">
-                    <div className="row align-items-center">
+                    <div className="d-flex flex-wrap align-items-start">
+                        {/* Imagen */}
+                        <img
+                            src={vehicle.image}
+                            className="flex-image me-4 mb-3"
+                            alt={vehicle.properties.name}
+                        />
 
-                        <div className="col-md-4 mb-3">
-                            <img src={vehicle.image} classNameName="img-fluid rounded-start" alt={vehicle.properties.name} />
-                        </div>
-
-                        <div className="col-md-8">
+                        {/* Texto */}
+                        <div className="flex-grow-1">
                             <h2 className="mb-4">{vehicle.properties.name}</h2>
 
-                            <ul className="list-group list-group-flush">
-                                <li className="list-group-item">Model: {vehicle.properties.model}</li>
-                                <li className="list-group-item">Vehicle className: {vehicle.properties.vehicle_className}</li>
-                                <li className="list-group-item">Manufacturer: {vehicle.properties.manufacturer}</li>
-                                <li className="list-group-item">Passengers: {vehicle.properties.passengers}</li>
-                                <li className="list-group-item">Crew: {vehicle.properties.crew}</li>
+                            <ul className="list-group list-group-flush mb-3">
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Model: {vehicle.properties.model}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Vehicle class: {vehicle.properties.vehicle_class}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Manufacturer: {vehicle.properties.manufacturer}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Passengers: {vehicle.properties.passengers}</li>
+                                <li className="list-group-item bg-custom-dark text-white border-dark">Crew: {vehicle.properties.crew}</li>
                             </ul>
 
-                            <Link to="/" className="btn btn-primary mt-4">Volver</Link>
+                            <Link to="/" className="btn btn-primary">Volver</Link>
                         </div>
                     </div>
                 </div>
             );
             break;
+
         default:
             content = (<p>No se encontró el tipo.</p>);
     }
 
-
-    return (
-        <div className="container-fluid">{content}</div>
-    )
+return (
+    <div className="container">
+        {content}
+    </div>
+)
 }

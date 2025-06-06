@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function PlanetCard({data}) {
     return (
-        <div className="card my-card" >
+        <div className="card my-card bg-custom-dark text-white border-dark" >
             <img src={data.image} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{data.properties.name}</h5>

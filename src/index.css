@@ -1,3 +1,8 @@
+body {
+    background-color: #121212; /* negro suave */
+    color: #f8f9fa; /* blanco Bootstrap */
+}
+
 .my-card{
     width: 18rem;
 }
@@ -6,4 +11,31 @@
     display: flex;
     overflow-x: scroll;
     gap: 15px;
+}
+
+.my-carousel::-webkit-scrollbar {
+    height: 12px;
+}
+
+
+.my-carousel::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.my-carousel::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+    border: 2px solid #121212;
+}
+
+.flex-image {
+    max-width: 50%; /* ocupa hasta el 50% horizontal */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bg-custom-dark {
+    background-color: #121212 !important;
+    color: #f8f9fa !important;
 }

@@ -1,6 +1,6 @@
 export function Carousel({title, items, renderCard}){
     return(
-        <div className="">
+        <div className="bg-custom-dark text-white">
             <h1 className="text-danger">{title}</h1>
 			<div className="my-carousel">
 				{
