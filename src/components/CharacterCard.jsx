@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function CharacterCard({data}) {
     return (
         <div className="card my-card" >
@@ -6,7 +8,7 @@ export function CharacterCard({data}) {
                     <h5 className="card-title">{data.properties.name}</h5>
                     <p className="card-text">{data.properties.hair_color}</p>
                     <p className="card-text">{data.properties.eye_color}</p>
-                    <a href="#" className="btn btn-primary">Learn more</a>
+                    <Link to={`/details/characters/${data.uid}`} className="btn btn-primary">Learn more</Link>
                     <button>fav</button>
                 </div>
         </div>
