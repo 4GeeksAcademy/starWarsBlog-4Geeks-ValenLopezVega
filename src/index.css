@@ -1,20 +1,20 @@
 body {
-    background-color: #121212; /* negro suave */
-    color: #f8f9fa; /* blanco Bootstrap */
+    background-color: black;
+    color: white;
 }
 
-.my-card{
+.my-card {
     width: 18rem;
 }
 
-.my-carousel{
+.my-carousel {
     display: flex;
     overflow-x: scroll;
     gap: 15px;
 }
 
 .my-carousel::-webkit-scrollbar {
-    height: 12px;
+    height: 0px;
 }
 
 
@@ -29,13 +29,19 @@ body {
 }
 
 .flex-image {
-    max-width: 50%; /* ocupa hasta el 50% horizontal */
+    max-width: 50%;
+    /* ocupa hasta el 50% horizontal */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
 
 .bg-custom-dark {
-    background-color: #121212 !important;
-    color: #f8f9fa !important;
+    background-color: #121212;
+    ;
+    color: #f8f9fa;
+}
+
+.black {
+    background-color: black;
 }
