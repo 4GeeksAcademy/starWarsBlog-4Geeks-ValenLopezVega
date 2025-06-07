@@ -20,7 +20,7 @@ export function FavoriteButton({ element }) {
     };
 
     return (
-        <button onClick={handleFavorite} className="btn btn-transparent">
+        <button onClick={handleFavorite} className="btn btn-light">
             <i className={isFavorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>
         </button>
     );

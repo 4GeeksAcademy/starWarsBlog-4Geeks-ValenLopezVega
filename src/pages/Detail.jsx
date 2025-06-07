@@ -6,9 +6,6 @@ export function Detail() {
     const { store } = useGlobalReducer()
     const { type, id } = useParams()
 
-    console.log("STORE CHARACTERS:", store.characters);
-    console.log("ID PARAM:", id);
-
     const character = store.characters.find(char => char.uid === id);
     const planet = store.planets.find(item => item.uid === id);
     const vehicle = store.vehicles.find(i => i.uid === id);
@@ -31,14 +28,15 @@ export function Detail() {
                             <h2 className="mb-4">{character.properties.name}</h2>
 
                             <ul className="list-group list-group-flush mb-3 ">
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Eye color: {character.properties.eye_color}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Hair color: {character.properties.hair_color}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Gender: {character.properties.gender}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Height: {character.properties.height}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Skin color: {character.properties.skin_color}</li>
+                                <li className="list-group-item black text-white border-dark">Eye color: {character.properties.eye_color}</li>
+                                <li className="list-group-item black text-white border-dark">Hair color: {character.properties.hair_color}</li>
+                                <li className="list-group-item black text-white border-dark">Gender: {character.properties.gender}</li>
+                                <li className="list-group-item black text-white border-dark">Height: {character.properties.height}</li>
+                                <li className="list-group-item black text-white border-dark">Skin color: {character.properties.skin_color}</li>
+                                <li className="list-group-item black text-white border-dark">Birth year: {character.properties.birth_year}</li>
                             </ul>
 
-                            <Link to="/" className="btn btn-primary">Volver</Link>
+                            <Link to="/" className="btn btn-outline-secondary">Go back</Link>
                         </div>
                     </div>
                 </div>
@@ -61,12 +59,12 @@ export function Detail() {
                             <h2 className="mb-4">{planet.properties.name}</h2>
 
                             <ul className="list-group list-group-flush mb-3">
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Climate: {planet.properties.climate}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Terrain: {planet.properties.terrain}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Gravity: {planet.properties.gravity}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Population: {planet.properties.population}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Rotation period: {planet.properties.rotation_period}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Orbital period: {planet.properties.orbital_period}</li>
+                                <li className="list-group-item black text-white border-dark">Climate: {planet.properties.climate}</li>
+                                <li className="list-group-item black text-white border-dark">Terrain: {planet.properties.terrain}</li>
+                                <li className="list-group-item black text-white border-dark">Gravity: {planet.properties.gravity}</li>
+                                <li className="list-group-item black text-white border-dark">Population: {planet.properties.population}</li>
+                                <li className="list-group-item black text-white border-dark">Rotation period: {planet.properties.rotation_period}</li>
+                                <li className="list-group-item black text-white border-dark">Orbital period: {planet.properties.orbital_period}</li>
                             </ul>
 
                             <Link to="/" className="btn btn-primary">Volver</Link>
@@ -92,14 +90,14 @@ export function Detail() {
                             <h2 className="mb-4">{vehicle.properties.name}</h2>
 
                             <ul className="list-group list-group-flush mb-3">
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Model: {vehicle.properties.model}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Vehicle class: {vehicle.properties.vehicle_class}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Manufacturer: {vehicle.properties.manufacturer}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Passengers: {vehicle.properties.passengers}</li>
-                                <li className="list-group-item bg-custom-dark text-white border-dark">Crew: {vehicle.properties.crew}</li>
+                                <li className="list-group-item black text-white border-dark">Model: {vehicle.properties.model}</li>
+                                <li className="list-group-item black text-white border-dark">Vehicle class: {vehicle.properties.vehicle_class}</li>
+                                <li className="list-group-item black text-white border-dark">Manufacturer: {vehicle.properties.manufacturer}</li>
+                                <li className="list-group-item black text-white border-dark">Passengers: {vehicle.properties.passengers}</li>
+                                <li className="list-group-item black text-white border-dark">Crew: {vehicle.properties.crew}</li>
                             </ul>
 
-                            <Link to="/" className="btn btn-primary">Volver</Link>
+                            <Link to="/" className="btn btn-outline-secondary">Go back</Link>
                         </div>
                     </div>
                 </div>

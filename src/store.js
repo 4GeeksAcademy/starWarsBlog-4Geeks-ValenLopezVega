@@ -37,7 +37,7 @@ export default function storeReducer(store, action = {}) {
     case 'DELETE_FAVORITE':
       return {
         ...store,
-        favorites: store.favorites.filter((item) => item.id != action.payload)
+        favorites: store.favorites.filter((item) => item._id != action.payload)
       }
 
     default:

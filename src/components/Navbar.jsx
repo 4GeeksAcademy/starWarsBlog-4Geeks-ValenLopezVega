@@ -6,14 +6,14 @@ export const Navbar = () => {
 
 	const { store, dispatch } = useGlobalReducer()
 
-	const deleteFavorite = (id) => {
+	const deleteFavorite = (_id) => {
 		dispatch({
-			type: "DELETE_FAVORITE", payload: id
+			type: "DELETE_FAVORITE", payload: _id
 		})
 	}
 
 	return (
-		<nav className="navbar navbar-dark bg-custom-dark p-3">
+		<nav className="navbar navbar-dark bg-custom-dark p-3 mb-4">
 			<div className="container">
 				{/* <Link to={"/"}>
 					<img
@@ -23,9 +23,9 @@ export const Navbar = () => {
 				</Link> */}
 			</div>
 			<div className="dropdown">
-				<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<button className="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Favorites
-					<span className="number-gray bg-secondary bor ms-1 me-1 ">
+					<span className="number-gray bg-dark bor ms-1 me-1 ">
 						{store.favorites.length}
 					</span>
 				</button>
@@ -35,11 +35,11 @@ export const Navbar = () => {
 							return (
 								<li
 									key={person._id}
-									className="d-flex justify-content-between align-items-center px-2"
-								><a className="dropdown-item active" href="#">{person.properties?.name}</a>
+									className="d-flex justify-content-between align-items-center px-2 bg-dark text-light"
+								><a className="dropdown-item active bg-dark" href="#">{person.properties?.name}</a>
 									<button
 										type="button"
-										className="btn btn-trasparent"
+										className="btn btn-transparent text-light"
 										onClick={() => deleteFavorite(person._id)}>
 
 										<i className="fa-solid fa-trash"></i></button>
@@ -49,6 +49,6 @@ export const Navbar = () => {
 					}
 				</ul>
 			</div>
-		</nav >
+		</nav>
 	);
 };
