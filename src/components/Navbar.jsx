@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import useGlobalReducer from "../hooks/useGlobalReducer";
-// import logoStarWars from "../assets/img/logo.png"
+import logo from "../assets/img/logosw.png"
 
 export const Navbar = () => {
 
@@ -13,19 +12,16 @@ export const Navbar = () => {
 	}
 
 	return (
-		<nav className="navbar navbar-dark bg-custom-dark p-3 mb-4">
-			<div className="container">
-				{/* <Link to={"/"}>
-					<img
-						src={logoStarWars}
-						alt="logo Star Wars"
-						className="w-50" />
-				</Link> */}
-			</div>
+		<div className="navbar navbar-dark bg-custom-dark px-5 mb-5 d-flex justify-content-between">
+			<img
+				src={logo}
+				alt="logo Star Wars"
+				className="mx-4"
+				style={{ width: '150px', height: 'auto' }} />
 			<div className="dropdown">
-				<button className="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<button className="btn btn-secondary dropdown-toggle mx-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Favorites
-					<span className="number-gray bg-dark bor ms-1 me-1 ">
+					<span className="number-gray bg-secondary bor ms-1 me-1 ">
 						{store.favorites.length}
 					</span>
 				</button>
@@ -49,6 +45,6 @@ export const Navbar = () => {
 					}
 				</ul>
 			</div>
-		</nav>
+		</div>
 	);
 };
