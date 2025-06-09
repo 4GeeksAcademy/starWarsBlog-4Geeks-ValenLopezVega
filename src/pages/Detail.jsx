@@ -67,7 +67,7 @@ export function Detail() {
                                 <li className="list-group-item black text-white border-dark">Orbital period: {planet.properties.orbital_period}</li>
                             </ul>
 
-                            <Link to="/" className="btn btn-primary">Volver</Link>
+                            <Link to="/" className="btn btn-outline-secondary">Go back</Link>
                         </div>
                     </div>
                 </div>
